@@ -37,6 +37,7 @@ a {
   text-align: center;
   z-index: 10;
   top: 0%;
+  position: relative;
   background-color: var(--first-color);
   /* box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px; */
 }
@@ -82,9 +83,13 @@ button {
   display: flex;
   align-items: center;
   transition: ease-in-out 0.5s;
+  position: absolute;
+  left: 38%;
+  top: 10%;
 }
 
 .navbar-links button {
+  cursor: pointer;
   border: none;
   background-color: var(--second-color);
   border-radius: var(--button-radius);
@@ -95,6 +100,7 @@ button {
   height: 40px;
   width: 150px;
   font-size: 18px;
+  z-index: 1000;
 }
 
 .navbar-links-log-review {
@@ -103,6 +109,7 @@ button {
   height: 40px;
   width: 180px;
   font-size: 18px;
+  z-index: 1000;
 }
 
 .navbar-links-search-icon img {
@@ -112,28 +119,51 @@ button {
   cursor: pointer;
 }
 
-.navbar-links-search-field {
+.navbar-search {
   height: 40px;
   width: 400px;
+  display: flex;
+  justify-content: space-evenly;
   margin: auto;
   position: relative;
 }
 
-.navbar-links-search-field-input {
+.navbar-search-search {
+  position: absolute;
+  z-index: 100;
+  left: 3%;
+  top: 16%;
+  border-right: 1px solid black;
+  cursor: pointer;
+}
+
+.navbar-search-search img {
+  width: 25px;
+  height: 25px;
+}
+
+.navbar-search-input {
+  width: 400px;
+  height: 40px;
+}
+
+.navbar-search-input input {
   width: 100%;
   height: 100%;
-  left: 0;
-  position: absolute;
+  font-size: 20px;
   border-radius: 20px;
-  padding-left: 20px;
+  padding: 2px 10px 2px 40px;
+  outline: none;
   color: var(--second-color);
   background-color: var(--fourth-color);
 }
 
-.navbar-links-search-field-img {
+.navbar-search-cross {
   position: absolute;
-  right: 0;
-  transform: translate(-9px, 6px);
+  z-index: 100;
+  right: 3%;
+  top: 16%;
+  border-left: 1px solid black;
   cursor: pointer;
 }
 
@@ -154,7 +184,6 @@ button {
   color: white;
   position: absolute;
   z-index: 100;
-  border: 1px solid black;
   background-color: var(--fourth-color);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -166,6 +195,12 @@ button {
   border-top: 1px solid black;
 }
 
+.search-field-items-error {
+  width: 90%;
+  height: 30px;
+  text-align: center;
+  font-size: 20px;
+}
 .search-field-items-img {
   height: 70px;
   width: 65px;
@@ -1002,8 +1037,9 @@ html {
   justify-content: space-evenly;
 }
 
-.footer-email-field input {
+.footer-email-input-field {
   width: 320px;
+  height: 50px;
   text-align: center;
   font-size: 14px;
   transform: translateX(30px);
@@ -1033,6 +1069,31 @@ html {
 .footer-container-right {
   margin-right: 20px;
   margin-bottom: 20px;
+}
+
+.loader-parent {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .go-up {

@@ -28,33 +28,51 @@
       </a>
       </div>
       <div class="navbar-links">
-        <a href="./profile.html">
-          <button class="navbar-links-profile">Profile</button></a
-        >
+        <!-- <div class="navbar-links-profile">
+          <button>Profile</button>
+        </div> -->
 
-        <a href="./log-new-review.html">
+        <button class="navbar-links-profile"><a href="./profile.html">Profile</a></button>
+
+        <!-- <a href="./log-new-review.html">
         <button class="navbar-links-log-review">
           Log new Review
-        </button></a>
+        </button>
+      </a> -->
+      
+        <button class="navbar-links-log-review">
+          <a href="./log-new-review.html">
+          Log new Review
+        </a>
+        </button>
+      
 
         <div class="navbar-links-search-icon">
           <img src="./src/Images/Icons/icons8-search-50.png" alt="" />
         </div>
       </div>
 
-      <div class="navbar-links-search-field hidden">
-        <input type="text" name="navbar-links-search-field"
-        class="navbar-links-search-field-input"
-        placeholder="Search here!">
-        <img src="src/Images/Icons/icons8-close.svg" alt="Close search field" class="navbar-links-search-field-img hidden">
+      <div class="navbar-search">
+        <div class="navbar-search-search hidden">
+          <img src="./src/Images/Icons/icons8-search-50.png" alt="" />
+        </div>
+
+        <div class="navbar-search-input hidden">
+          <input type="text" name="navbar-search-input-field" class="navbar-search-input-field"
+          placeholder="Search here!">
+        </div>
+
+        <div class="navbar-search-cross hidden">
+          <img src="src/Images/Icons/icons8-close.svg" alt="Close search field">
+        </div>
       </div>
 
       <div class="navbar-signup">
         <a href="./sign-up.html"><button>Sign Up</button></a>
       </div>
     </div>
-    <div class="search-field hidden">
-      <div class="search-field-items">
+    <div class="search-field">
+      <!-- <div class="search-field-items">
         <div class="search-field-items-img">
           <img src="src/Images/dune-movie-poster.jpg" alt="" class="search-field-items-image">
         </div>
@@ -67,8 +85,7 @@
             <div class="search-field-items-desc-year">2020</div>
           </div>
         </div>
-      </div>
-      
+      </div> -->
     </div>
     <!-- <div class="gradient"></div> -->
     <div class="section-1">
@@ -175,15 +192,14 @@
       <div class="footer-title">Stay in touch!</div>
       <div class="footer-email-field">
         <div>
-          <label for="footer-email-field"></label>
           <input
             type="text"
             name="footer-email-field"
-            class="footer-email-field"
+            class="footer-email-input-field"
             placeholder="Enter your email to recieve latest updates!"
           />
         </div>
-        <span><img src="./src/Images/Icons/icons8-arrow-48.png" alt="" /></span>
+        <span><img src="./src/Images/Icons/icons8-arrow-48.png" alt="" class="footer-email-icon"/></span>
       </div>
       <div class="footer-text">
         You will recieve updates about your friend's activities, latest movies
@@ -204,33 +220,17 @@
     </div>
     <!-- Footer ends here -->
 
+    <!-- <div class="loader-parent"><span class="loader"></span></div> -->
+    
+
+      
+
     <div class="go-up">
       <img src="src/Images/Icons/icons8-up-64.png" alt="Go up btn">
     </div>
     <div class="go-up-background hidden">
       <img src="src/Images/Icons/icons8-circle-50.png" alt="Go uo btn background">
     </div>
-    <!-- <script src="script.js"></script> -->
-    <!-- <script>
-      const profileBtn = document.querySelector(".navbar-links-profile");
-      const reviewBtn = document.querySelector(".navbar-links-log-review");
-      const searchField = document.querySelector(".navbar-links-search-field");
-      const searchIcon = document.querySelector(".navbar-links-search-icon");
-      const cross = document.querySelector(".search-field-cross");
-
-      searchIcon.addEventListener("click", function () {
-        profileBtn.classList.add("hidden");
-        reviewBtn.classList.add("hidden");
-        searchIcon.classList.add("hidden");
-        searchField.classList.remove("hidden");
-      });
-
-      cross.addEventListener("click", function () {
-        profileBtn.classList.remove("hidden");
-        reviewBtn.classList.remove("hidden");
-        searchIcon.classList.remove("hidden");
-        searchField.classList.add("hidden");
-      });
-    </script> -->
+   
   </body>
 </html>
