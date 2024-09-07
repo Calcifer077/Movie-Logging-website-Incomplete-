@@ -7,3 +7,4 @@ log-new-review.css
 /node_modules
 /dist
 /.parcel-cache
+/src/JS/config.js
