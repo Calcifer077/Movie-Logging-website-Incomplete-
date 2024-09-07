@@ -1,10 +1,10 @@
 import * as model from "./model.js";
 
-import topMoviesView from "../Views/topMoviesView.js";
-import yourRecentReviewsViews from "../Views/yourRecentReviewsViews.js";
-import indexView from "../Views/indexView.js";
-import searchView from "../Views/searchView.js";
-import searchResultView from "../Views/searchResultView.js";
+import topMoviesView from "./Views/topMoviesView.js";
+import yourRecentReviewsViews from "./Views/yourRecentReviewsViews.js";
+import indexView from "./Views/indexView.js";
+import searchView from "./Views/searchView.js";
+import searchResultView from "./Views/searchResultView.js";
 
 const controlYourReviews = async function () {
   try {
