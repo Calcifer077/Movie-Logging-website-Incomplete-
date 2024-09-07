@@ -3,7 +3,7 @@ import View from "./View.js";
 class IndexView extends View {
   // DOM
   // DOM - Sections
-  _navbar = document.querySelector(".navbar");
+  _navbar = document.querySelector(".navbar-links");
   _section1 = document.querySelector(".section-1");
   _section2 = document.querySelector(".section-2-recent-reviews");
   _section3 = document.querySelector(".section-3-top-movies");
@@ -11,12 +11,19 @@ class IndexView extends View {
   // DOM - Section element
   _profileBtn = document.querySelector(".navbar-links-profile");
   _reviewBtn = document.querySelector(".navbar-links-log-review");
-  _searchField = document.querySelector(".navbar-links-search-field");
   _searchIcon = document.querySelector(".navbar-links-search-icon");
-  _cross = document.querySelector(".navbar-links-search-field-img");
+
+  _searchField = document.querySelector(".navbar-search-input");
+  _cross = document.querySelector(".navbar-search-cross");
+  _search = document.querySelector(".navbar-search-search");
+
   _searchFieldCards = document.querySelector(".search-field");
 
   _section1Btns = document.querySelector(".section-1-left-buttons");
+
+  _footerEmailField = document.querySelector(".footer-email-input-field");
+  _footerEmailIcon = document.querySelector(".footer-email-icon");
+
   _goUp = document.querySelector(".go-up");
   _goUpBackground = document.querySelector(".go-up-background");
 
@@ -97,7 +104,7 @@ class IndexView extends View {
     });
   }
 
-  addHandlerSearch(handler) {
+  addHandlerSearchField(handler) {
     this._searchIcon.addEventListener("click", () => {
       this._changeBackground(
         [
@@ -106,6 +113,7 @@ class IndexView extends View {
           this._searchIcon,
           this._searchField,
           this._cross,
+          this._search,
         ],
         "hidden"
       );
@@ -119,9 +127,16 @@ class IndexView extends View {
           this._searchIcon,
           this._searchField,
           this._cross,
+          this._search,
         ],
         "hidden"
       );
+    });
+  }
+
+  addHandlerFooterEmail(handler) {
+    this._footerEmailIcon.addEventListener("click", () => {
+      this._footerEmailField.value = "";
     });
   }
 }

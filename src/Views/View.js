@@ -6,4 +6,13 @@ export default class View {
     const markup = this._generateMarkup();
     this._parentElement.insertAdjacentHTML("afterbegin", markup);
   }
+
+  renderError() {
+    const markup = this._generateErrorMarkup();
+    this._parentElement.insertAdjacentHTML("afterbegin", markup);
+  }
+  renderSpinner() {
+    const markup = `<div class="loader-parent"><span class="loader"></span></div>`;
+    this._parentElement.insertAdjacentHTML("afterbegin", markup);
+  }
 }
